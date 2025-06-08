@@ -76,7 +76,6 @@ function gotoNextWeek() {
   for (let row = 2; row <= id_Sheet.getMaxRows(); row++ ) {
     const name = id_Sheet.getRange(row, 3).getValue();
     const email = id_Sheet.getRange(row, 12).getValue();
-    // Logger.log(name, email);
     const copiedSheet = copied_Spreadsheet_sheets[0].copyTo(copied_Spreadsheet);
     copiedSheet.setName(name);
     copiedSheet.protect().setDescription(name);
