@@ -2,6 +2,7 @@ function gotoNextWeek() {
   const spreadSheet = SpreadsheetApp.getActiveSpreadsheet();
   const spreadSheet_Id = spreadSheet.getId();
   const spreadSheet_file = DriveApp.getFileById(spreadSheet_Id);
+  const id_Spreadsheet_Id = '1tbckHu9qBfhXR8fNDY3ZH5zNXQ1soQV9FWgjhJV1NZY';
 
   const col_min = 2; //ぬりぬり最初の列数 (B列なら2)
   const row_min = 3; //ぬりぬり最初の行数
@@ -71,7 +72,7 @@ function gotoNextWeek() {
   }
 
   // シートの複製と権限の設定
-  const id_Spreadsheet = SpreadsheetApp.openById("1tbckHu9qBfhXR8fNDY3ZH5zNXQ1soQV9FWgjhJV1NZY");
+  const id_Spreadsheet = SpreadsheetApp.openById(id_Spreadsheet_Id);
   const id_Sheet = id_Spreadsheet.getSheetByName("trainee");
   for (let row = 2; row <= id_Sheet.getMaxRows(); row++ ) {
     const name = id_Sheet.getRange(row, 3).getValue();
