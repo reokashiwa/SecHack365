@@ -1,0 +1,9 @@
+function gotoNextWeek() {
+    
+// Apps Scriptのトリガー設定
+    ScriptApp.newTrigger("nurinuri")
+	.forSpreadsheet(copied_Spreadsheet)
+	.onChange()
+	.create();
+
+}

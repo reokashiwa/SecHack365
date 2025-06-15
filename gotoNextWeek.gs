@@ -90,10 +90,4 @@ function gotoNextWeek() {
 	const me = Session.getEffectiveUser();
 	copiedSheet.protect().addEditor(me);
     }
-    
-    // Apps Scriptのトリガー設定
-    ScriptApp.newTrigger("nurinuri")
-	.forSpreadsheet(spreadSheet)
-	.onEdit()
-	.create();
 }
