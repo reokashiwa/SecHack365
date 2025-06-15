@@ -1,4 +1,4 @@
-function getAveragedBackgroundRGB(){
+function nurinuri(){
   const col_min = 2; //ぬりぬり最初の列数 (B列なら2)
   const row_min = 3; //ぬりぬり最初の行数
 
